@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+import { CardService } from '../../services/card.service';
+
 import { Card } from 'src/app/models/Card';
 
 @Component({
@@ -10,7 +13,7 @@ export class BodyComponent implements OnInit {
 
   cards: Card[];
 
-  constructor() { this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": [1, 2, 3] }] }
+  constructor(private cardService: CardService) { this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }] }
 
   ngOnInit() {
   }
