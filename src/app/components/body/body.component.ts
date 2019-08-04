@@ -10,7 +10,7 @@ export class BodyComponent implements OnInit {
 
   cards: Card[];
 
-  constructor() { this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa" }] }
+  constructor() { this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": [1, 2, 3] }] }
 
   ngOnInit() {
   }
