@@ -13,7 +13,10 @@ export class BodyComponent implements OnInit {
 
   cards: Card[];
 
-  constructor(private cardService: CardService) { this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }] }
+  constructor(private cardService: CardService) {
+
+    this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }]
+  }
 
   ngOnInit() {
   }

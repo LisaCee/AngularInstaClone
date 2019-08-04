@@ -15,8 +15,9 @@ export class CardService {
   avatarUrl: string = 'https://randomuser.me/api/?results=30';
 
   constructor(private http: HttpClient) { }
-  getImages(): Observable<any> {
-    return this.http.get<any>(`${this.imgUrl}`, httpOptions);
+  getData(): Observable<Card> {
+    return this.http.get<Card>(`${this.imgUrl}`, httpOptions);
   }
+
 
 }

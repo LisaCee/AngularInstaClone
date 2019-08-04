@@ -1,7 +1,7 @@
 export class Card {
     id: number;
     avatar: string;
-    image: string;
+    image: any;
     comments: any;
     username: string
 }

@@ -9,9 +9,9 @@ import { Card } from '../../models/Card'
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent implements OnInit {
 
-  images: []
   @Input() card: Card;
 
   constructor(private cardService: CardService) {
@@ -19,10 +19,11 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cardService.getImages().subscribe(img => {
-      this.images = img;
-      console.log(this.images)
+    this.cardService.getData().subscribe(data => {
+      this.card = data;
+      console.log('THIS', this.card)
     })
+
   }
 
 }
