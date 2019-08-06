@@ -19,8 +19,8 @@ export class BodyComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cardService.getData().subscribe(data => {
-      this.cards = data;
+    this.cardService.getData().subscribe(cards => {
+      this.cards = cards;
       console.log('THIS', this.cards)
     })
   }

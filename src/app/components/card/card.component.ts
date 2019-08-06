@@ -12,7 +12,7 @@ import { Card } from '../../models/Card'
 
 export class CardComponent implements OnInit {
 
-  @Input() cards: Card;
+  @Input() card: Card;
 
   constructor(private cardService: CardService) {
 
