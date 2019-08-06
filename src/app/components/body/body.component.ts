@@ -15,10 +15,14 @@ export class BodyComponent implements OnInit {
 
   constructor(private cardService: CardService) {
 
-    this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }]
+    // this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }]
   }
 
   ngOnInit() {
+    this.cardService.getData().subscribe(data => {
+      this.cards = data;
+      console.log('THIS', this.cards)
+    })
   }
 
 }

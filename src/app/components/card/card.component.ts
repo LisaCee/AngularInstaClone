@@ -12,17 +12,14 @@ import { Card } from '../../models/Card'
 
 export class CardComponent implements OnInit {
 
-  @Input() card: Card;
+  @Input() cards: Card;
 
   constructor(private cardService: CardService) {
 
   }
 
   ngOnInit() {
-    this.cardService.getData().subscribe(data => {
-      this.card = data;
-      console.log('THIS', this.card)
-    })
+
 
   }
 
