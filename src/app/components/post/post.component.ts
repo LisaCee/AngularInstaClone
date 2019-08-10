@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { PostService } from '../../services/post.service';
+// import { PostService } from '../../services/post.service';
 
 import { PostImg } from '../../models/PostImg'
+import { User } from 'src/app/models/User';
+import { Post } from 'src/app/models/Post';
 
 @Component({
   selector: 'app-post',
@@ -12,15 +14,15 @@ import { PostImg } from '../../models/PostImg'
 
 export class PostComponent implements OnInit {
 
-  @Input() postImg: PostImg;
+  @Input() postImgs: PostImg;
+  @Input() users: User;
+  @Input() posts: Post;
 
-  constructor(private postService: PostService) {
+  constructor() {
 
   }
 
   ngOnInit() {
-
-
   }
 
 }

@@ -1,4 +1,4 @@
 export class PostImg {
     id: number;
-    image: any;
+    downloar_url: string;
 }
