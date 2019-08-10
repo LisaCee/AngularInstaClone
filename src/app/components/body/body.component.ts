@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { CardService } from '../../services/card.service';
+import { PostService } from '../../services/post.service';
+import { UserService } from '../../services/user.service';
 
-import { Card } from 'src/app/models/Card';
+import { PostImg } from 'src/app/models/PostImg';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-body',
@@ -11,18 +13,27 @@ import { Card } from 'src/app/models/Card';
 })
 export class BodyComponent implements OnInit {
 
-  cards: Card[];
+  postImgs: PostImg[];
+  users: User[];
 
-  constructor(private cardService: CardService) {
+  // private postService: PostService,
+  constructor(private userService: UserService) {
 
     // this.cards = [{ "id": 1, "avatar": "fakeurl", "image": "anotherFakeUrl", "username": "lisa", "comments": ["hello", 2, 3] }]
   }
 
   ngOnInit() {
-    this.cardService.getData().subscribe(cards => {
-      this.cards = cards;
-      console.log('THIS', this.cards)
-    })
+    // this.postService.getPostImg().subscribe(images => {
+    //   this.postImgs = images;
+    //   console.log('THIS', this.postImgs)
+    // })
+    this.userService.getUser().subscribe
+      (users => {
+        console.log('USER', users)
+        // this.users = users;
+        // console.log('USER', this.users)
+      }
+      )
   }
 
 }
